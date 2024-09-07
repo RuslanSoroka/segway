@@ -1,0 +1,121 @@
+.protective {
+    &__body {
+        border: 5.44px solid var(--blue);
+        display: flex;
+        min-height: 9.0625rem;
+    }
+
+    &__content {
+        margin: 15px;
+        flex: 1;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 123%;
+        text-transform: uppercase;
+        color: var(--grey);
+        margin: 0 0 5px 0;
+        &--mark {
+            color: var(--blue);
+        }
+    }
+
+    &__text {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        color: var(--grey);
+        width: 10.78571428571429em;
+    }
+
+    &__img {
+        margin: 3px 15px 12px 0;
+        flex: 0 1 25.97014925373134%;
+        position: relative;
+        padding: 0 0 35.82089552238806% 0;
+        min-height: 120px;
+
+        & img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    @include customBreakPointMF(28.125em) {
+        &__content {
+            align-self: center;
+            margin: 25px;
+        }
+
+        &__title {
+            font-size: 27px;
+            line-height: 119%;
+            margin: 0 0 9px 0;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
+    @include customBreakPointMF(39.375em) {
+        &__body {
+            flex-direction: row-reverse;
+        }
+
+        &__title {
+            &--mark {
+                color: var(--grey);
+            }
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 18px;
+            width: 15.785714em;
+        }
+
+        &__img {
+            margin: 15px 0 15px 35px;
+            flex: 0 1 27.20156555772994%;
+            position: relative;
+            padding: 0 0 19.66731898238748% 0;
+            min-height: 120px;
+
+            & img {
+                max-width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    @include customBreakPointMF($break-point-xl) {
+        &__content {
+            margin: 35px;
+        }
+
+        &__title {
+            font-size: 50px;
+            line-height: 119%;
+            margin: 0 0 9px 0;
+            &--mark {
+                color: var(--grey);
+            }
+        }
+
+        &__img {
+            margin: 20px 0 20px 50px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.warranty-condition {
+    @extend %flexRow;
+    margin: 0 -1.8px;
+
+    &__column {
+        flex: 1 0 33.333%;
+        padding: 0 1.8px;
+    }
+
+    &__item {
+        border: 1.09px solid var(--grey-2);
+        text-align: center;
+        padding: 10px;
+        height: 100%;
+        &:active {
+            background: var(--blue);
+            > * {
+                color: var(--white);
+            }
+        }
+    }
+
+    &__term,
+    &__price {
+        line-height: 103%;
+        font-size: 18px;
+    }
+
+    &__term {
+        font-weight: 400;
+    }
+
+    &__price {
+        font-weight: 700;
+        color: var(--blue);
+    }
+
+    @media (min-width: $break-point-xl) {
+        &__item:hover {
+            background: var(--blue);
+            > * {
+                color: var(--white);
+            }
+        }
+    }
+}

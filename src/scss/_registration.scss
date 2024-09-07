@@ -1,0 +1,119 @@
+.registration {
+    border: 5px solid var(--grey-2);
+    &__body {
+        padding: 15px;
+    }
+
+    &__warranty {
+        @extend %flexColumn;
+        &-text {
+            text-align: center;
+            width: 150px;
+            align-self: center;
+            font-size: 18px;
+            margin: 0 0 0.44444em 0;
+            &-bold {
+                font-weight: 700;
+            }
+        }
+        &-condition {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__content {
+        @extend %flexRow;
+        justify-content: center;
+        margin: 0 0 20px 0;
+    }
+    &__price {
+        text-align: center;
+
+        &-old {
+            font-weight: 300;
+            font-size: 22px;
+            text-decoration: line-through;
+        }
+
+        &-new {
+            font-weight: 700;
+            font-size: 38px;
+        }
+    }
+
+    &__protective {
+        display: none;
+    }
+
+    &__buttons {
+        display: flex;
+        column-gap: 9px;
+    }
+
+    &__button {
+        width: 50%;
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    @include tablet() {
+        &__warranty {
+            &-text {
+                width: 250px;
+                align-self: center;
+                font-size: 24px;
+            }
+        }
+    }
+
+    @include desktop() {
+        grid-area: registration;
+        align-self: center;
+        &__warranty {
+            &-text {
+                font-size: 18px;
+                min-width: 100%;
+                text-align: left;
+            }
+        }
+
+        &__content {
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__protective {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+            margin: 0 0 0 31px;
+        }
+
+        &__protective-title {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--blue);
+        }
+
+        &__protective-img {
+            width: 120px;
+            height: 87px;
+            & img {
+                object-fit: cover;
+                max-width: 100%;
+            }
+        }
+
+        &__buttons {
+            column-gap: 22px;
+        }
+
+        &__button {
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+}

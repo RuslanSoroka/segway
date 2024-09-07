@@ -1,0 +1,48 @@
+.headline-block {
+    > *:not(:first-child) {
+        margin: 7px 0 0 0;
+    }        
+    text-align: center;
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 116%;
+        text-transform: uppercase;
+
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+    }
+
+@include tablet(){
+    &__title {
+        font-size: 35px;
+        line-height: 119%;
+    }
+
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+    @include desktop() {
+        > *:not(:first-child) {
+            margin: 18px 0 0 0;
+        }
+
+        &__title {
+            font-size: 50px;
+            line-height: 119%;
+        }
+
+        &__text {
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}

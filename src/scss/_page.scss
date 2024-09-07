@@ -1,0 +1,121 @@
+.page {
+    flex: 1;
+    margin: 51.2px 0 0 0;
+
+    &__segway-list {
+        background: var(--grey);
+    }
+
+    &__order {
+        padding: 16px 0 15px;
+    }
+
+    &__order-tabs {
+        padding: 15px 0 25px;
+        background-color: rgba(153, 153, 153, 0.2);
+    }
+
+    &__packing-list {
+        padding: 25px 0;
+        background: linear-gradient(
+            360deg,
+            #eee 0%,
+            rgba(245, 245, 245, 0.79) 53.12%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+
+    &__accessories {
+        padding: 40px 0;
+    }
+
+    &__poster {
+        width: 100%;
+        height: 406px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 80% 0;
+        }
+    }
+
+    &__features {
+        padding: 30px 0;
+    }
+
+    &__manual {
+            padding: 36px 0;
+    }
+
+    @include tablet() {
+        &__poster {
+            height: 500px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(
+                    0deg,
+                    #f5f5f5 0%,
+                    rgba(232, 232, 232, 0) 100%
+                );
+            }
+
+            & img {
+                object-position: 80% 0;
+            }
+        }
+    }
+
+    @include desktop() {
+        margin: 0;
+
+        &__order {
+            padding: 40px 0 20px;
+        }
+
+        &__order-tabs {
+            padding: 20px 0 30px;
+            background-color: var(--white);
+        }
+
+        &__packing-list {
+            padding: 30px 0 40px;
+        }
+
+        &__accessories {
+            padding: 60px 0 80px;
+        }
+
+        &__poster {
+            height: 724px;
+
+            &::after {
+                height: 212px;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 70% 0;
+            }
+        }
+
+        &__features {
+            padding: 50px 0;
+        }
+
+        &__manual {
+            padding: 50px 0;
+    }
+    }
+}
+

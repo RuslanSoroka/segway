@@ -1,0 +1,29 @@
+@mixin mobile() {
+    @media (min-width: $break-point-sm) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media (min-width: $break-point-md) {
+        @content;
+    }
+}
+
+@mixin desktop() {
+    @media (min-width: $break-point-xl) {
+        @content;
+    }
+}
+
+@mixin customBreakPointMF($width) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin customBreakPointDF($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}

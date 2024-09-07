@@ -1,0 +1,30 @@
+.director {
+    @extend %flex-default;
+    margin: 0 71px 0 0;
+    &__img {
+        margin: 0 13px 0 0;
+    }
+
+    &__content {
+        > * :not(:last-child) {
+            margin: 0 0 0.3076923076923077em 0;
+        }
+    }
+
+    &__full-name {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 119%;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 119%;
+        text-transform: lowercase;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--blue);
+    }
+}

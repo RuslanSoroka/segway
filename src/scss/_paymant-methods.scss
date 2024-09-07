@@ -1,0 +1,77 @@
+.payment-methods {
+    text-align: center;
+    grid-area: pay-method;
+
+    &__title {
+        font-weight: 300;
+        font-size: 18px;
+        text-align: center;
+        color: var(--grey);
+        margin: 0 0 18px 0;
+    }
+
+    &__list {
+        @extend %flexRow;
+        margin: 0 -3px;
+        margin: 0 0 18px 0;
+    }
+
+    &__item {
+        & svg {
+            width: 40.5px;
+            height: 25px;
+        }
+    }
+
+    &__penultimate-text {
+        font-weight: 600;
+        font-size: 18px;
+        text-align: center;
+        color: var(--blue);
+    }
+
+    &__latest-text {
+        color: green;
+    }
+
+    @media (min-width: $break-point-md) {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title text text2"
+            "methods methods methods";
+        text-align: left;
+
+        &__title {
+            grid-area: title;
+            margin: 0;
+        }
+
+        &__list {
+            grid-area: methods;
+            margin: 8px 0 0 0;
+        }
+
+        &__penaltimate-text {
+            grid-area: text;
+        }
+
+        &__latest-text {
+            grid-area: text2;
+        }
+    }
+
+    @media (min-width: $break-point-xl) {
+        &__item {
+            & svg {
+                width: 25.52px;
+                height: 16px;
+
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+}

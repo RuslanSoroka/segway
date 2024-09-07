@@ -1,0 +1,97 @@
+.order-segway {
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    &__in-stock {
+        width: 6.5625rem;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 119%;
+        text-align: center;
+        color: var(--green-check-1);
+        @extend %flex-default;
+        min-height: 27px;
+        border: 2px solid var(--green-check-1);
+        align-self: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 37px;
+        line-height: 93%;
+        text-transform: uppercase;
+        color: var(--grey);
+        text-align: center;
+        margin: 16px 0 7px;
+    }
+
+    &__swiper {
+        margin: 0 -15px;
+
+        &-wrapper {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__swiper-slide {
+        text-align: center;
+    }
+
+    &__protective {
+        margin: 0 0 22px 0;
+    }
+
+    &__payment-methods {
+        margin: 24px 0 0 0;
+    }
+
+    @include desktop {
+        &__in-stock {
+            width: 5.5625rem;
+            align-self: self-start;
+        }
+
+        &__protective {
+            display: none;
+        }
+
+        &__body {
+            display: grid;
+            grid-template-columns: 1fr 42.2%;
+            grid-template-rows: 1fr auto auto;
+            grid-template-areas:
+                "title swiper"
+                "registration swiper"
+                "pay-method swiper";
+        }
+
+        &__title {
+            grid-area: title;
+            font-size: 80px;
+            line-height: 87%;
+            text-align: left;
+        }
+
+        &__swiper {
+            grid-area: swiper;
+            margin: 0;
+            &-wrapper {
+                height: 100% !important;
+                margin: 0;
+            }
+
+            &-slide {
+                height: 100% !important;
+                & img {
+                    width: 100%;
+                    height: 95%;
+                }
+            }
+        }
+
+        &__payment-methods {
+            margin: 20px 0 0 0;
+        }
+    }
+}

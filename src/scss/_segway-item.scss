@@ -1,0 +1,49 @@
+.segway-item {
+    padding: 12px 14px 8px;
+    &__img {
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        & img {
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__prefix {
+        display: none;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 119%;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--white);
+        margin: 7px 0 0 0;
+    }
+
+    &:active {
+        background: var(--blue);
+    }
+
+    @include desktop() {
+        padding: 12px 30px 14px;
+        &__img {
+            width: 80px;
+            height: 80px;
+        }
+
+        &__prefix {
+            display: inline;
+        }
+
+        &:hover {
+            background: var(--blue);
+        }
+    }
+}

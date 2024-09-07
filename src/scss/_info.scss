@@ -1,0 +1,52 @@
+.info {
+    @extend %flex-default;
+    column-gap: 9px;
+
+    &__link {
+        font-family: var(--font-family);
+        font-size: 18px;
+        text-align: center;
+        color: var(--white);
+
+        &--ph-string {
+            display: none;
+        }
+    }
+
+    @include desktop() {
+        column-gap: 24px;
+        &__link {
+            font-family: var(--font-family);
+            font-size: 18px;
+            text-align: center;
+            color: var(--white);
+
+            &--basket {
+                order: 1;
+                & svg {
+                    width: 24px;
+                    height: 24px;
+                }
+                @include svgFill(var(--white), "no");
+            }
+
+            &--ph-svg {
+                display: none;
+            }
+
+            &--inst {
+                order: 2;
+                & svg {
+                    width: 22px;
+                    height: 22px;
+                }
+                @include svgFill(var(--white), "yes");
+            }
+
+            &--ph-string {
+                display: block;
+                order: 3;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.segway-list {
+    &__wrapper {
+        margin: 0 -15px;
+    }
+
+    &__columns {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__anouncement {
+        display: none;
+    }
+
+    @include desktop() {
+        &__wrapper.swiper-wrapper {
+            flex-direction: row;
+            margin: 0;
+            width: 993px !important;
+        }
+
+        &__anouncement {
+            display: block;
+            background: var(--blue);
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            text-align: center;
+            color: var(--white);
+
+            &-position {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 48px;
+            }
+        }
+    }
+}

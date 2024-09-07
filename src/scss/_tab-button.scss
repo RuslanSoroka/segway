@@ -1,0 +1,38 @@
+.tab-button {
+    min-height: 63px;
+    padding: 7px 20px;
+    &--active {
+        background: var(--blue);
+
+        .tab-button__svg {
+            & svg > * path {
+                fill: var(--white);
+            }
+        }
+
+        .tab-button__svg-stroke {
+            stroke: var(--white);
+        }
+
+        .tab-button__text {
+            color: var(--white);
+        }
+    }
+
+    &__text {
+        display: none;
+    }
+
+    @include desktop() {
+        display: flex;
+        flex-wrap: nowrap;
+        &__text {
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--grey-2);
+            display: block;
+            width: 105px;
+            margin: 0 0 0 18px;
+        }
+    }
+}

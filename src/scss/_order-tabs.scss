@@ -1,0 +1,42 @@
+.order-tabs {
+    &__container {
+    }
+
+    &__body {
+        display: grid;
+        grid-template: 1fr auto / 1fr;
+        grid-template-areas:
+            "content"
+            "navigation";
+    }
+
+    &__content {
+        grid-area: content;
+    }
+
+    &__item {
+    }
+
+    &__menu {
+        grid-area: navigation;
+        @extend %flexRow;
+        background-color: white;
+    }
+
+    &__button {
+        flex: 0 1 25%;
+        @extend %flex-default;
+    }
+
+    @include desktop() {
+        &__body {
+            grid-template: auto 1fr / 1fr;
+            grid-template-areas:
+                "navigation"
+                "content";
+        }
+        &__item {
+            background-color: rgba(153, 153, 153, 0.2);
+        }
+    }
+}

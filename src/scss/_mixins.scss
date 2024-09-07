@@ -1,0 +1,11 @@
+@mixin svgFill($color, $inst) {
+    @if ($inst == "yes") {
+        & svg path {
+            fill: $color;
+        }
+    } @else {
+        & svg path {
+            stroke: $color;
+        }
+    }
+}

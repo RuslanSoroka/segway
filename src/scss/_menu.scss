@@ -1,0 +1,60 @@
+.menu {
+    display: flex;
+    @include customBreakPointDF(63.8125em) {
+        align-items: start;
+        justify-content: center;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            &:first-child {
+                margin: 5em 0 0 0;
+            }
+        }
+
+        &__item {
+            margin: 0 0 3.3333em 0;
+            position: relative;
+            &:not(:last-child)::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var(--white);
+                left: 49.5%;
+                top: 60px;
+            }
+        }
+    }
+
+    &__link {
+        letter-spacing: 0.02em;
+        color: var(--white);
+        text-transform: uppercase;
+        position: relative;
+        z-index: 70;
+        text-align: center;
+    }
+
+    @include desktop() {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+        }
+
+        &__item {
+            margin: 0 1.333em 0 0;
+        }
+
+        &__link {
+            letter-spacing: 0.02em;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+    }
+}

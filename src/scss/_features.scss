@@ -1,0 +1,32 @@
+.features {
+    &__title {
+        margin: 0 0 50px 0;
+    }
+    &__body {
+        @extend %flexRow;
+        margin-top: -12px;
+        margin-bottom: -12px;
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+
+    &__column {
+        flex: 0 0 25%;
+        padding: 12px 7px;
+    }
+
+    @include desktop() {
+        &__title {
+            margin: 0 0 80px 0;
+        }
+        
+        &__body {
+            margin-top: -14px;
+            margin-bottom: -14px;
+        }
+
+        &__column {
+            padding: 14px 12px;
+        }
+    }
+}

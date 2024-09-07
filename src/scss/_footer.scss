@@ -1,0 +1,78 @@
+.footer {
+    background-color: var(--grey);
+    padding: 20px;
+
+    &__body {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-areas: "logo"
+                            "name"
+                            "adress"
+                            "phone";
+        text-align: center;
+        > *:not(:first-child) {
+            font-size: 18px;
+            letter-spacing: 0.02em;
+            color: var(--white);
+            margin: 0 0 11px 0;
+        }
+    }
+
+    &__logo {
+        margin: 0 0 30px 0;
+        grid-area: logo;
+    }
+
+    &__adress {
+        &--bottom {
+            display: block;
+            padding: 5px 0 0 0;
+            grid-area: adress;
+        }
+
+        &__name {
+            grid-area: name;
+        }
+
+        &__phone {
+            grid-area: phone;
+        }
+    }
+
+    @include tablet() {
+        &__body {
+            grid-template-columns: 1fr auto auto auto;
+            grid-template-rows: 1fr;
+            column-gap: 15px;
+            grid-template-areas: "logo phone adress name";
+
+            > *:not(:first-child) {
+                font-size: 13px;
+                line-height: 119%;
+                margin: 0;
+            }
+        }
+
+        &__logo {
+            text-align: left;
+            margin: 0;
+
+        }
+
+        &__adress {
+            text-align: center;
+            display: flex;
+
+            &--bottom {
+                padding: 0;
+            }
+        }
+    }
+
+    @include desktop() {
+        &__body {
+            column-gap: 40px;
+        }
+    }
+}
