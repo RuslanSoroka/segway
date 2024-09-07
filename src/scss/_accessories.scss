@@ -22,16 +22,17 @@
             margin-left: -12.5px;
             margin-right: -12.5px;
             overflow: hidden;
-            flex-wrap: wrap ;
+            flex-wrap: wrap;
         }
 
         &__see-more {
             display: flex;
             justify-content: center;
-            padding: 26px 0 0 0 ;
-            & button {
-                width: 14.3125rem;
-            }
+            padding: 26px 0 0 0;
+        }
+
+        &__see-button {
+            width: 14.3125rem;
         }
     }
 }

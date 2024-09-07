@@ -20,6 +20,9 @@
             font-size: 18px;
             text-align: center;
             color: var(--white);
+            &:hover {
+                transform: scale(1.07);
+            }
 
             &--basket {
                 order: 1;

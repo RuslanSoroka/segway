@@ -46,7 +46,7 @@
     }
 
     &__manual {
-            padding: 36px 0;
+        padding: 36px 0;
     }
 
     @include tablet() {
@@ -115,7 +115,6 @@
 
         &__manual {
             padding: 50px 0;
-    }
+        }
     }
 }
-

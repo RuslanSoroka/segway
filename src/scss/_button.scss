@@ -11,8 +11,15 @@
     border: none;
     cursor: pointer;
 
+    &:active {
+        transform: scale(0.9);
+    }
+
     @include desktop() {
         font-weight: 700;
         font-size: 18px;
+        &--big:hover {
+            transform: scale(1.05);
+        }
     }
 }

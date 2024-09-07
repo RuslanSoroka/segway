@@ -6,10 +6,11 @@
         display: grid;
         align-items: center;
         justify-content: center;
-        grid-template-areas: "logo"
-                            "name"
-                            "adress"
-                            "phone";
+        grid-template-areas:
+            "logo"
+            "name"
+            "adress"
+            "phone";
         text-align: center;
         > *:not(:first-child) {
             font-size: 18px;
@@ -57,7 +58,6 @@
         &__logo {
             text-align: left;
             margin: 0;
-
         }
 
         &__adress {

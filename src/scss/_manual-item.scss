@@ -6,9 +6,6 @@
         margin: 0 0 12px 0;
     }
 
-    &__text {
-    }
-
     @include desktop() {
         display: flex;
         text-align: left;

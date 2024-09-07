@@ -52,9 +52,6 @@
 
     &__button {
         width: 50%;
-        &:active {
-            transform: scale(0.9);
-        }
     }
 
     @include tablet() {
@@ -108,12 +105,6 @@
 
         &__buttons {
             column-gap: 22px;
-        }
-
-        &__button {
-            &:hover {
-                transform: scale(0.9);
-            }
         }
     }
 }
