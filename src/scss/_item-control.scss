@@ -1,0 +1,65 @@
+.item-control {
+    width: 33.333%;
+    padding: 8px 0 8px 0;
+    @extend %flex-default;
+    flex-direction: column;
+
+    &__img {
+        position: relative;
+        height: 5.375rem;
+        width: 5.375rem;
+        @extend %flex-default;
+
+        > svg {
+            max-width: 100%;
+            object-fit: caver;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &__border {
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 1;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        color: var(--Grey-2, #999);
+        margin: 10px 0 0 0;
+    }
+
+    @include desktop() {
+        &__img {
+            height: 6.25rem;
+            width: 6.25rem;
+        }
+
+        &__img:hover {
+            .item-control__border svg path {
+                fill: var(--blue);
+                stroke-width: 2px;
+                stroke: var(--blue);
+            }
+
+            > svg path {
+                fill: var(--white);
+            }
+
+            & + .item-control__text {
+                color: var(--blue);
+            }
+        }
+    }
+}

@@ -1,15 +1,16 @@
 .headline-block {
     > *:not(:first-child) {
         margin: 7px 0 0 0;
-    }        
+    }
     text-align: center;
+    @extend %flex-default;
+    flex-direction: column;
 
     &__title {
         font-weight: 700;
         font-size: 28px;
         line-height: 116%;
         text-transform: uppercase;
-
     }
 
     &__text {
@@ -18,17 +19,17 @@
         letter-spacing: 0.02em;
     }
 
-@include tablet(){
-    &__title {
-        font-size: 35px;
-        line-height: 119%;
-    }
+    @include tablet() {
+        &__title {
+            font-size: 35px;
+            line-height: 119%;
+        }
 
-    &__text {
-        font-size: 16px;
-        font-weight: 400;
+        &__text {
+            font-size: 16px;
+            font-weight: 400;
+        }
     }
-}
 
     @include desktop() {
         > *:not(:first-child) {
